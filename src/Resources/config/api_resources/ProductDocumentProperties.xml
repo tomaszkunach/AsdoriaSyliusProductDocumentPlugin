@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<properties xmlns="https://api-platform.com/schema/metadata/properties-3.0">
+    <property resource="%asdoria.model.product_document.class%" name="id" identifier="true" writable="false"/>
+    <property resource="%asdoria.model.product_document.class%" required="true" name="path" writable="true"/>
+    <property resource="%asdoria.model.product_document.class%" name="documentType" writable="true"/>
+    <property resource="%asdoria.model.product_document.class%" name="updatedAt"/>
+    <property resource="%asdoria.model.product_document.class%" name="createdAt"/>
+</properties>

@@ -10,6 +10,7 @@ asdoria:
         download_documents: Download documents
         edit_document_type: Edit Document type
         new_document_type: Create a new document type
+        add_document: Add document
     form:
         product:
             documents: Documents
@@ -21,3 +22,5 @@ asdoria:
             preview: See file
         document_type:
             name: Name
+        translations:
+            document_type: Document Type

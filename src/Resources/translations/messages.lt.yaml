@@ -1,0 +1,26 @@
+asdoria:
+    menu:
+        admin:
+            main:
+                document_type:
+                    header: Dokumentų tipai
+    ui:
+        documents: Dokumentai
+        document_types: Dokumentų tipai
+        download_documents: Atsisiųsti dokumentus
+        edit_document_type: Redaguoti dokumento tipą
+        new_document_type: Sukurkite naują dokumento tipą
+        add_document: Pridėti dokumentą
+    form:
+        product:
+            documents: Dokumentai
+        product_document:
+            document_type: Dokumento tipas
+        document:
+            type: Tipas
+            file: Failas
+            preview: Žiūrėti failą
+        document_type:
+            name: Vardas
+        translations:
+            document_type: Dokumento tipas
