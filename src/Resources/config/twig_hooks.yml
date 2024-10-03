@@ -1,0 +1,41 @@
+twig_hooks:
+    hooks:
+        'sylius_admin.document_type.index#javascripts':
+            scripts:
+                template: '@AsdoriaSyliusProductDocumentPlugin/Admin/_javascripts.html.twig'
+        
+        'sylius_admin.document_type.create.content.form':
+            form:
+                template: '@AsdoriaSyliusProductDocumentPlugin/Admin/DocumentType/_form.html.twig'
+                
+        'sylius_admin.document_type.update.content.form':
+            form:
+                template: '@AsdoriaSyliusProductDocumentPlugin/Admin/DocumentType/_form.html.twig'
+                
+        'sylius_admin.product.update.content.form.side_navigation':
+            documents:
+                template: '@AsdoriaSyliusProductDocumentPlugin/Admin/Product/Sidebar/documents.html.twig'
+                
+        'sylius_admin.product.update.content.form.sections':
+            documents:
+                template: '@AsdoriaSyliusProductDocumentPlugin/Admin/Product/Section/documents.html.twig'
+                
+        'sylius_admin.product.update.content.form.sections.documents':
+            documents_collection:
+                template: '@AsdoriaSyliusProductDocumentPlugin/Admin/Product/Section/documents_collection.html.twig'
+            add_document:
+                template: '@AsdoriaSyliusProductDocumentPlugin/Admin/Product/Section/add_document.html.twig'
+
+        'sylius_shop.product.show.page':
+            header:
+                template: '@SyliusShop/product/show/page/header.html.twig'
+                priority: 3
+            info:
+                template: '@SyliusShop/product/show/page/info.html.twig'
+                priority: 2
+            product_listing:
+                template: '@SyliusShop/product/show/page/product_listing.html.twig'
+                priority: 0
+            documents:
+                template: '@AsdoriaSyliusProductDocumentPlugin/Shop/Product/Show/_documents.html.twig'
+                priority: 1

@@ -1,9 +1,12 @@
+{% from '@SyliusAdmin/shared/helper/icon.html.twig' import icon %}
+
 <form class="asdoria-update-document-types"
       action="{{ path('asdoria_admin_ajax_document_type_update_position') }}"
+      method="post"
       data-csrf-token="{{ csrf_token('update-document-type-position') }}"
 >
-    <button class="ui labeled loadable icon button sylius-save-position" type="submit">
-        <i class="icon checkmark"></i>
+    <button class="btn" type="submit">
+        {{ icon({ icon: action.icon|default('pencil'), class: 'icon icon-tabler' }) }}
         {{ 'sylius.ui.save_positions'|trans }}
     </button>
 </form>

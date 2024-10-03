@@ -1,0 +1,9 @@
+asdoria:
+    ui:
+        document_type:
+            code:
+                unique: Šis kodas jau užimtas.
+                not_blank: Laukas „Kodas“ negali būti tuščias.
+        document_type_translation:
+            name:
+                not_blank: Laukas „Vardas“ negali būti tuščias.
