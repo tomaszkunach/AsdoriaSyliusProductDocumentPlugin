@@ -20,7 +20,7 @@
     "prefer-stable": true,
     "require": {
         "php": "^8.0",
-        "sylius/sylius": "dev-up-grid-bundle"
+        "sylius/sylius": "^2.0.0-alpha.2 || dev-up-grid-bundle"
     },
     "require-dev": {
         "phpunit/phpunit": "^9.5"
