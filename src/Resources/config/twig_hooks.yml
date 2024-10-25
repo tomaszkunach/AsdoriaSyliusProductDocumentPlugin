@@ -1,25 +1,25 @@
-twig_hooks:
+sylius_twig_hooks:
     hooks:
         'sylius_admin.document_type.index#javascripts':
             scripts:
                 template: '@AsdoriaSyliusProductDocumentPlugin/Admin/_javascripts.html.twig'
-        
+
         'sylius_admin.document_type.create.content.form':
             form:
                 template: '@AsdoriaSyliusProductDocumentPlugin/Admin/DocumentType/_form.html.twig'
-                
+
         'sylius_admin.document_type.update.content.form':
             form:
                 template: '@AsdoriaSyliusProductDocumentPlugin/Admin/DocumentType/_form.html.twig'
-                
+
         'sylius_admin.product.update.content.form.side_navigation':
             documents:
                 template: '@AsdoriaSyliusProductDocumentPlugin/Admin/Product/Sidebar/documents.html.twig'
-                
+
         'sylius_admin.product.update.content.form.sections':
             documents:
                 template: '@AsdoriaSyliusProductDocumentPlugin/Admin/Product/Section/documents.html.twig'
-                
+
         'sylius_admin.product.update.content.form.sections.documents':
             documents_collection:
                 template: '@AsdoriaSyliusProductDocumentPlugin/Admin/Product/Section/documents_collection.html.twig'
