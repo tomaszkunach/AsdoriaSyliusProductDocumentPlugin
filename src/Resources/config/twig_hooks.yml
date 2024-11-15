@@ -4,12 +4,20 @@ sylius_twig_hooks:
             scripts:
                 template: '@AsdoriaSyliusProductDocumentPlugin/Admin/_javascripts.html.twig'
 
-        'sylius_admin.document_type.create.content.form':
-            form:
+        'sylius_admin.document_type.create.content.form.sections.general':
+            default:
+                enabled: false
+                
+        'sylius_admin.document_type.create.content.form.sections':
+            general:
                 template: '@AsdoriaSyliusProductDocumentPlugin/Admin/DocumentType/_form.html.twig'
-
-        'sylius_admin.document_type.update.content.form':
-            form:
+                
+        'sylius_admin.document_type.update.content.form.sections.general':
+            default:
+                enabled: false
+                
+        'sylius_admin.document_type.update.content.form.sections':
+            general:
                 template: '@AsdoriaSyliusProductDocumentPlugin/Admin/DocumentType/_form.html.twig'
 
         'sylius_admin.product.update.content.form.side_navigation':

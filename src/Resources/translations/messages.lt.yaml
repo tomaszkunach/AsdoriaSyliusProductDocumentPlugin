@@ -6,6 +6,7 @@ asdoria:
                     header: Dokumentų tipai
     ui:
         documents: Dokumentai
+        document_type: Dokumento tipas
         document_types: Dokumentų tipai
         download_documents: Atsisiųsti dokumentus
         edit_document_type: Redaguoti dokumento tipą
