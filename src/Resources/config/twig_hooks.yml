@@ -7,15 +7,15 @@ sylius_twig_hooks:
         'sylius_admin.document_type.create.content.form.sections.general':
             default:
                 enabled: false
-                
+
         'sylius_admin.document_type.create.content.form.sections':
             general:
                 template: '@AsdoriaSyliusProductDocumentPlugin/Admin/DocumentType/_form.html.twig'
-                
+
         'sylius_admin.document_type.update.content.form.sections.general':
             default:
                 enabled: false
-                
+
         'sylius_admin.document_type.update.content.form.sections':
             general:
                 template: '@AsdoriaSyliusProductDocumentPlugin/Admin/DocumentType/_form.html.twig'
@@ -35,15 +35,6 @@ sylius_twig_hooks:
                 template: '@AsdoriaSyliusProductDocumentPlugin/Admin/Product/Section/add_document.html.twig'
 
         'sylius_shop.product.show.page':
-            header:
-                template: '@SyliusShop/product/show/page/header.html.twig'
-                priority: 3
-            info:
-                template: '@SyliusShop/product/show/page/info.html.twig'
-                priority: 2
-            product_listing:
-                template: '@SyliusShop/product/show/page/product_listing.html.twig'
-                priority: 0
             documents:
                 template: '@AsdoriaSyliusProductDocumentPlugin/Shop/Product/Show/_documents.html.twig'
                 priority: 1
