@@ -3,10 +3,17 @@ declare(strict_types=1);
 
 namespace Asdoria\SyliusProductDocumentPlugin\Traits;
 
+use App\Customer\Entity\ManagedCustomers;
 use Asdoria\SyliusProductDocumentPlugin\Model\ProductDocumentInterface;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\ORM\Mapping\InverseJoinColumn;
+use Doctrine\ORM\Mapping\JoinColumn;
+use Doctrine\ORM\Mapping\JoinTable;
+use Doctrine\ORM\Mapping\ManyToMany;
+use Doctrine\ORM\Mapping\OneToMany;
+use Sylius\Component\Rbac\Model\Role;
 
 /**
  *
@@ -15,13 +22,12 @@ trait ProductDocumentsTrait
 {
     /**
      * @var Collection
-     *
-     * @ORM\OneToMany(
-     *      targetEntity="Asdoria\SyliusProductDocumentPlugin\Model\ProductDocumentInterface",
-     *      mappedBy="product",
-     *      cascade={"all"})
-     * @var ProductDocumentInterface[]|Collection
-     */
+     **/
+    #[OneToMany(
+        mappedBy: 'product',
+        targetEntity: ProductDocumentInterface::class,
+        cascade: ['all'],
+    )]
     protected $productDocuments;
 
     /**

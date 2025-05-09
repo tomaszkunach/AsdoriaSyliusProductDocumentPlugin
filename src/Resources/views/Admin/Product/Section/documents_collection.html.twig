@@ -1,0 +1,29 @@
+{% set productDocuments = hookable_metadata.context.form.productDocuments %}
+{% set product = hookable_metadata.context.product %}
+
+<div
+    class="row"
+    {{ sylius_test_html_attribute('documents') }}
+    {{ sylius_test_html_attribute('document-subforms') }}
+>
+    {% for document_form in productDocuments %}
+        <div
+            class="col-12 col-md-6 row mb-4"
+            {{ sylius_test_html_attribute('document-subform')}}
+            {{ sylius_test_html_attribute('documentType', document_form.documentType.vars.value) }}
+            {{ sylius_test_html_attribute('document-url', document_form.vars.value.path ? document_form.vars.value.path|imagine_filter('sylius_small') : null) }}
+        >
+            <div class="col">
+                <div class="mb-3">
+                    {{ form_row(document_form.documentType, sylius_test_form_attribute('documentType')) }}
+                </div>
+                <div type="file" class="mb-3">
+                    {{ form_row(document_form.file, sylius_test_form_attribute('file')) }}
+                </div>
+                <div class="mt-3 d-flex items-center">
+                    {{ form_widget(document_form.vars.button_delete, { label: 'sylius.ui.delete'|trans, attr: { class: 'btn btn-outline-danger w-100','data-test-image-delete': '' }}) }}
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>

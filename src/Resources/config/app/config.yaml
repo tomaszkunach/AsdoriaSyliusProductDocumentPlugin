@@ -1,24 +1,10 @@
 imports:
     - "@AsdoriaSyliusProductDocumentPlugin/Resources/config/grids/*.yaml"
 
-
 doctrine_migrations:
     migrations_paths:
         'Asdoria\SyliusProductDocumentPlugin\Migrations': '@AsdoriaSyliusProductDocumentPlugin/Migrations'
 
-sylius_ui:
-    events:
-        sylius.shop.product.show.content:
-            blocks:
-                asdoria_shop_product_show_documents:
-                    template: '@AsdoriaSyliusProductDocumentPlugin/Shop/Product/Show/_documents.html.twig'
-                    context: {}
-                    priority: 30
-        asdoria.admin.document_type.index.javascripts:
-            blocks:
-                asdoria_document_type_javascripts:
-                    template: "@AsdoriaSyliusProductDocumentPlugin/Admin/_javascripts.html.twig"
-                    priority: 10
 framework:
     serializer:
         mapping:

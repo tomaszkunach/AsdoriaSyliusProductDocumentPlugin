@@ -1,0 +1,6 @@
+{% set productDocuments = hookable_metadata.context.form.productDocuments %}
+{% set attributes = sylius_test_form_attribute('add-document')|sylius_merge_recursive({ label: 'asdoria.ui.add_document'|trans, attr: { class: 'btn btn-outline-primary '}}) %}
+
+<div class="d-grid gap-2">
+    {{ form_widget(productDocuments.vars.button_add, attributes) }}
+</div>

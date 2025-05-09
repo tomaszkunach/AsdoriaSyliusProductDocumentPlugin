@@ -8,6 +8,7 @@ use Sylius\Bundle\ProductBundle\Form\Type\ProductType;
 use Symfony\Component\Form\AbstractTypeExtension;
 use Symfony\Component\Form\Extension\Core\Type\CollectionType;
 use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\UX\LiveComponent\Form\Type\LiveCollectionType;
 
 /**
  * Class ProductTypeExtension
@@ -21,10 +22,10 @@ class ProductTypeExtension extends AbstractTypeExtension
      * @param FormBuilderInterface $builder
      * @param array                $options
      */
-    public function buildForm(FormBuilderInterface $builder, array $options)
+    public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('productDocuments', CollectionType::class, [
+            ->add('productDocuments', LiveCollectionType::class, [
                 'entry_type'    => ProductDocumentType::class,
                 'allow_add'     => true,
                 'allow_delete'  => true,

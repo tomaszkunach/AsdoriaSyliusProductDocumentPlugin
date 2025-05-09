@@ -20,9 +20,11 @@ use Symfony\Component\HttpKernel\Exception\HttpException;
  * @author  Philippe Vesin <pve.asdoria@gmail.com>
  */
 class DocumentTypeController extends ResourceController
-{    /**
- * @throws HttpException
- */
+{
+
+    /**
+        * @throws HttpException
+     */
     public function updatePositionsAction(Request $request): Response
     {
         $configuration = $this->requestConfigurationFactory->create($this->metadata, $request);
